@@ -1,0 +1,39 @@
+<template>
+    <fragment>
+        <c-hero-full class="illustration-section-01"/>
+        <c-clients top-divider bottom-divider/>
+<!--        <c-features-split invert-mobile image-fill class="illustration-section-03"/>-->
+        <c-features-tiles class="gradient-section"/>
+        <c-pricing has-bg-color top-divider pricing-switcher/>
+        <c-cta has-bg-color split class="illustration-element-08"/>
+    </fragment>
+</template>
+
+<script>
+    // import layout
+    import CLayout from '@/layouts/LayoutDefault.vue'
+    // import sections
+    import CHeroSplit from '@/components/sections/HeroSplit.vue'
+    import CHeroFull from '@/components/sections/HeroFull.vue'
+    import CClients from '@/components/sections/Clients.vue'
+    import CFeaturesSplit from '@/components/sections/FeaturesSplit.vue'
+    import CFeaturesTiles from '@/components/sections/FeaturesTiles.vue'
+    import CPricing from '@/components/sections/Pricing.vue'
+    import CCta from '@/components/sections/Cta.vue'
+
+    export default {
+        name: 'Home',
+        components: {
+            // CHeroSplit,
+            CHeroFull,
+            CClients,
+            // CFeaturesSplit,
+            CFeaturesTiles,
+            CPricing,
+            CCta
+        },
+        created() {
+            this.$emit('update:layout', CLayout)
+        }
+    }
+</script>
