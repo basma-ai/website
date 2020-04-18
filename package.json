@@ -9,21 +9,30 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@bachdgvn/vue-otp-input": "^1.0.6",
     "axios": "^0.19.2",
     "connect-history-api-fallback": "^1.6.0",
     "core-js": "^2.6.5",
     "eslint-loader": "^2.1.2",
     "express": "^4.17.1",
     "feather-icons": "^4.28.0",
+    "izitoast": "^1.4.0",
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
+    "vee-validate": "^3.2.5",
     "vue": "^2.6.11",
+    "vue-analytics": "^5.22.1",
     "vue-axios": "^2.1.5",
     "vue-feather": "^1.0.0",
+    "vue-loading-button": "^0.2.0",
+    "vue-notifications": "^1.0.2",
+    "vue-password-strength-meter": "^1.7.1",
     "vue-phone-number-input": "^1.1.7",
+    "vue-recaptcha-v3": "^1.9.0",
     "vue-router": "^3.0.3",
-    "vue-typed-js": "^0.1.2"
+    "vue-typed-js": "^0.1.2",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",

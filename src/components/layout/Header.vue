@@ -25,7 +25,7 @@
                             class="list-reset text-xxs"
                             :class="navPosition && `header-nav-${navPosition}`">
                             <li>
-                                <router-link to="/chatbot/">Chatbot</router-link>
+                                <router-link to="/login/" class="text-color-primary-force">Login</router-link>
                             </li>
                         </ul>
                         <ul v-if="!hideSignin" class="list-reset header-nav-right">
@@ -122,3 +122,9 @@ export default {
   }
 }
 </script>
+
+<style>
+    .text-color-primary-force {
+        color: #FFB600 !important;
+    }
+</style>

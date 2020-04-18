@@ -21,38 +21,31 @@
                     <li class="reveal-scale-up" data-reveal-delay="400">
                         <c-image
                             :src="require('@/assets/images/clients-01.png')"
-                            alt="Client 01"
+                            alt="Ministry of Health in Bahrain"
                             :width="250"
                             :height="50" />
                     </li>
-<!--                    <li class="reveal-scale-up" data-reveal-delay="200">-->
-<!--                        <c-image-->
-<!--                            :src="require('@/assets/images/clients-02.svg')"-->
-<!--                            alt="Client 02"-->
-<!--                            :width="83"-->
-<!--                            :height="30" />-->
-<!--                    </li>-->
-<!--                    <li class="reveal-scale-up">-->
-<!--                        <c-image-->
-<!--                            :src="require('@/assets/images/clients-03.svg')"-->
-<!--                            alt="Client 03"-->
-<!--                            :width="125"-->
-<!--                            :height="39" />-->
-<!--                    </li>-->
-<!--                    <li class="reveal-scale-up" data-reveal-delay="200">-->
-<!--                        <c-image-->
-<!--                            :src="require('@/assets/images/clients-04.svg')"-->
-<!--                            alt="Client 04"-->
-<!--                            :width="150"-->
-<!--                            :height="31" />-->
-<!--                    </li>-->
-<!--                    <li class="reveal-scale-up" data-reveal-delay="400">-->
-<!--                        <c-image-->
-<!--                            :src="require('@/assets/images/clients-05.svg')"-->
-<!--                            alt="Client 05"-->
-<!--                            :width="113"-->
-<!--                            :height="30" />-->
-<!--                    </li>-->
+                    <li class="reveal-scale-up" data-reveal-delay="200">
+                        <c-image
+                                :src="require('@/assets/images/clients-04.png')"
+                                alt="Client 04"
+                                :width="140"
+                                :height="20" />
+                    </li>
+                    <li class="reveal-scale-up">
+                        <c-image
+                            :src="require('@/assets/images/clients-03.png')"
+                            alt="Client 03"
+                            :width="75"
+                            :height="39" />
+                    </li>
+                    <li class="reveal-scale-up" data-reveal-delay="200">
+                        <c-image
+                                :src="require('@/assets/images/clients-02.jpg')"
+                                alt="Physiocare"
+                                :width="200"
+                                :height="50" />
+                    </li>
                 </ul>
             </div>
         </div>

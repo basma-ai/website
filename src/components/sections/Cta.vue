@@ -21,7 +21,7 @@
                     </h3>
                 </div>
                 <div class="cta-action">
-                    <c-button tag="a" color="primary" wide-mobile href="#">
+                    <c-button tag="a" color="primary" wide-mobile href="mailto:hello@basma.ai">
                         Get Quote
                     </c-button>
                 </div>

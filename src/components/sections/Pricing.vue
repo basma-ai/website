@@ -69,7 +69,7 @@
 <!--                                    </div>-->
                                     <ul class="pricing-item-features-list list-reset text-xs mb-32">
                                         <li class="is-checked">5,000min/month</li>
-                                        <li class="is-checked">0.1/min per extra min</li>
+                                        <li class="is-checked">$0.1/min per extra min</li>
                                         <li class="is-checked">1 User</li>
                                         <li class="is-checked">1 Group</li>
                                         <li class="is-checked">2 Services</li>
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                             <div class="pricing-item-cta mb-8">
-                                <c-button tag="a" color="primary" wide href="#">Start free trial</c-button>
+                                <router-link to="/signup/" class="button button-primary button-block">Start free trial</router-link>
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
 <!--                                    </div>-->
                                     <ul class="pricing-item-features-list list-reset text-xs mb-32">
                                         <li class="is-checked">10,000min/month</li>
-                                        <li class="is-checked">0.1/min per extra min</li>
+                                        <li class="is-checked">$0.1/min per extra min</li>
                                         <li class="is-checked">5 Users</li>
                                         <li class="is-checked">3 Groups</li>
                                         <li class="is-checked">6 Services</li>
@@ -113,7 +113,7 @@
                                 </div>
                             </div>
                             <div class="pricing-item-cta mb-8">
-                                <c-button tag="a" color="primary" wide href="#">Start free trial</c-button>
+                                <router-link to="/signup/" class="button button-primary button-block">Start free trial</router-link>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
 <!--                                    </div>-->
                                     <ul class="pricing-item-features-list list-reset text-xs mb-32">
                                         <li class="is-checked">15,000min/month</li>
-                                        <li class="is-checked">0.1/min per extra min</li>
+                                        <li class="is-checked">$0.1/min per extra min</li>
                                         <li class="is-checked">10 Users</li>
                                         <li class="is-checked">10 Groups</li>
                                         <li class="is-checked">10 Services</li>
@@ -146,7 +146,7 @@
                                 </div>
                             </div>
                             <div class="pricing-item-cta mb-8">
-                                <c-button tag="a" color="primary" wide href="#">Start free trial</c-button>
+                                <router-link to="/signup/" class="button button-primary button-block">Start free trial</router-link>
                             </div>
                         </div>
                     </div>

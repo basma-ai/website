@@ -50,7 +50,7 @@
                                     Call Requests
                                 </h4>
                                 <p class="m-0 text-sm reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="300">
-                                    Scheduling video calls with your customers or call them right away.
+                                    Schedule video calls with your customers or call them right away.
                                 </p>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                         <div class="tiles-item-inner">
                             <div class="features-tiles-item-header">
                                 <div class="features-tiles-item-image mb-16 p-24 reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="100">
-                                    <feather class="text-color-secondary" type="video"></feather>
+                                    <feather class="text-color-secondary" type="eye"></feather>
                                 </div>
                             </div>
                             <div class="features-tiles-item-content">
