@@ -26,7 +26,7 @@
                                 class="text-color-secondary">5 minutes</b></p>
                     </div>
                 </div>
-                <div class="hero-figure illustration-element-05 reveal-from-top" data-reveal-delay="200">
+                <div class="hero-figure illustration-element-05 reveal-from-top">
                     <c-image
                             class="has-shadow"
                             :src="require('@/assets/images/carousel-item-01.png')"
