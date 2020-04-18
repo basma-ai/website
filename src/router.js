@@ -14,11 +14,11 @@ export default new Router({
       name: 'home',
       component: Home
     },
-    // {
-    //   path: '/secondary',
-    //   name: 'secondary',
-    //   component: Secondary
-    // },
+    {
+      path: '/chatbot',
+      name: 'chatbot',
+      component: Secondary
+    },
     {
       path: '/login',
       name: 'login',
