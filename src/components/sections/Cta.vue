@@ -17,7 +17,7 @@
                 ]" style="background-color: white">
                 <div class="cta-slogan">
                     <h3 class="m-0">
-                        Enterprise and want to go wild?
+                        <b class="text-color-primary">Enterprise</b> and want to go wild?
                     </h3>
                 </div>
                 <div class="cta-action">

@@ -57,7 +57,7 @@ const options = {
 Vue.use(VueNotifications, options)
 
 
-import {ValidationProvider, extend} from 'vee-validate';
+import {ValidationProvider, ValidationObserver, extend} from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
 import {required, email, min} from 'vee-validate/dist/rules';
 import {messages} from 'vee-validate/dist/locale/en.json';
@@ -84,6 +84,7 @@ extend('required', {
 
 // Register it globally
 Vue.component('ValidationProvider', ValidationProvider);
+Vue.component('ValidationObserver', ValidationObserver);
 
 import {VueReCaptcha} from 'vue-recaptcha-v3'
 
@@ -101,6 +102,10 @@ Vue.use(VueAnalytics, {
     id: 'UA-163382802-1',
     router
 });
+
+// VueDebounce
+import vueDebounce from 'vue-debounce'
+Vue.use(vueDebounce)
 
 new Vue({
     router,

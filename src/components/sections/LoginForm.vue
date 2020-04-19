@@ -76,7 +76,9 @@
                 let this_app = this;
                 this_app.loading = true
 
-                this_app.recaptcha().then((res) => {
+                this_app.recaptcha().then((token) => {
+                    this_app.captcha_token = token;
+
                     let params = {
                         org_username: this_app.username,
                         'g-recaptcha-response': this_app.captcha_token
@@ -85,7 +87,9 @@
                     this_app.axios.post(process.env.VUE_APP_API_URL + '/onboarding/check_org_username', params).then(response => {
                         this_app.loading = false
 
-                        if (response.data.data.username_exists) {
+                        if (null != response.data.data.errors) {
+                            this_app.handleErrors(response.data.data.errors)
+                        } else if (response.data.data.username_exists) {
                             window.location = process.env.VUE_APP_DASHBOARD_URL + '/' + this_app.username
                         } else {
                             this_app.handleErrors(["User does not exist"])
@@ -107,12 +111,7 @@
                 // (optional) Wait until recaptcha has been loaded.
                 await this.$recaptchaLoaded()
 
-                // Execute reCAPTCHA with action "login".
-                const token = await this.$recaptcha('login')
-
-                this.captcha_token = token;
-
-                return this.captcha_token
+                return await this.$recaptcha('login')
             }
         },
         template: '<button @click="recaptcha">Execute recaptcha</button>',

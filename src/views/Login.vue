@@ -4,7 +4,7 @@
 
 <script>
 // import layout
-import CLayout from '@/layouts/LayoutSignin.vue'
+import CLayout from '@/layouts/LayoutDefault.vue'
 // import sections
 import CLoginForm from '@/components/sections/LoginForm.vue'
 

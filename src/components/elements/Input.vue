@@ -17,9 +17,10 @@
                     :required="required"
                     :placeholder="placeholder"
                     v-on:keyup="onEnter"
+                    v-debounce:1s="deBounce"
                     @input="onInput"
                     @blur="onBlur"
-                    @focus="onFocus"/>
+                    @focus="onFocus" />
             <textarea
                     v-else
                     v-model="computedValue"
@@ -39,7 +40,7 @@
                     @focus="onFocus"></textarea>
             <slot/>
         </div>
-        <c-hint v-if="hint" :status="status" :hint="hint"></c-hint>
+<!--        <c-hint v-if="hint" :status="status" :hint="hint"></c-hint>-->
     </fragment>
 </template>
 
@@ -142,6 +143,9 @@
                 if (e.keyCode === 13) {
                     this.$emit('onEnter', e)
                 }
+            },
+            deBounce(e) {
+                this.$emit('deBounce', e)
             },
             onInput(e) {
                 this.$nextTick(() => {

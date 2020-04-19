@@ -20,173 +20,194 @@
                 <div class="tiles-wrap">
                     <div class="tiles-item">
                         <div class="tiles-item-inner">
-
-                            <div>
-                                <table v-if="false" class="darkTable">
-                                    <tr>
-                                        <td>IP number:</td>
-                                        <td>{{ results.ip }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Host address:</td>
-                                        <td>{{ results.hostname }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>City name:</td>
-                                        <td>{{ results.city }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Region name:</td>
-                                        <td>{{ results.region }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Country code:</td>
-                                        <td>{{ results.country }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>GPS:</td>
-                                        <td>{{ results.loc }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Postal code:</td>
-                                        <td>{{ results.postal }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Organization:</td>
-                                        <td>{{ results.org }}</td>
-                                    </tr>
-                                </table>
-                                <div v-show="step == 1">
-                                    <p class="text-xxs">
-                                        By signing up, I agree to basma.ai <a href="/terms#privacy-policy">Privacy
-                                        Policy</a> and <a href="/terms#terms-of-service">Terms of Service</a>.
-                                    </p>
-                                    <div class="mb-12">
-                                        <ValidationProvider name="email" rules="required|email" v-slot="{ errors }">
-                                            <c-input
-                                                    v-model="signup_params.email"
-                                                    type="email"
-                                                    label="Email"
-                                                    placeholder="name@company.com"
-                                                    label-hidden
-                                                    @onEnter="signup"
-                                                    required/>
-                                            <div class="form-hint text-color-error">{{ errors[0] }}</div>
-
-                                        </ValidationProvider>
-                                    </div>
-                                </div>
-                                <div v-show="step == 2">
-                                    <div class="mb-12">
-                                        <ValidationProvider name="name" rules="required|min:5|max:100"
-                                                            v-slot="{ errors }">
-                                            <c-input
-                                                    v-model="signup_params.org_name"
-                                                    type="text"
-                                                    label="Company name"
-                                                    placeholder="Company, Inc."
-                                                    @onEnter="signup"
-                                                    required/>
-                                            <div class="form-hint text-color-error">{{ errors[0] }}</div>
-                                        </ValidationProvider>
-                                    </div>
-                                    <div class="mb-12 input-username">
-                                        <c-label label="Company username"></c-label>
-
-                                        <ValidationProvider name="username" rules="required|min:4|max:20"
-                                                            v-slot="{ errors }">
-                                            <c-input type="text" disabled placeholder="dashboard.basma.ai/"
-                                                     form-group="mobile">
+                            <ValidationObserver slim ref="observer" v-slot="{ invalid }">
+                                <div>
+                                    <table v-if="false" class="darkTable">
+                                        <tr>
+                                            <td>IP number:</td>
+                                            <td>{{ results.ip }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Host address:</td>
+                                            <td>{{ results.hostname }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>City name:</td>
+                                            <td>{{ results.city }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Region name:</td>
+                                            <td>{{ results.region }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Country code:</td>
+                                            <td>{{ results.country }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GPS:</td>
+                                            <td>{{ results.loc }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Postal code:</td>
+                                            <td>{{ results.postal }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Organization:</td>
+                                            <td>{{ results.org }}</td>
+                                        </tr>
+                                    </table>
+                                    <div v-show="step == 1">
+                                        <div class="mb-12">
+                                            <ValidationProvider name="email" rules="required|email"
+                                                                v-slot="{ errors }">
                                                 <c-input
-                                                        v-model="signup_params.org_username"
-                                                        type="text"
-                                                        label="Company username"
-                                                        placeholder="username"
+                                                        v-model="signup_params.email"
+                                                        type="email"
+                                                        label="Email"
+                                                        placeholder="name@company.com"
                                                         label-hidden
+                                                        @onEnter="signup"
                                                         required/>
-                                            </c-input>
-                                            <div class="form-hint text-color-error">{{ errors[0] }}</div>
-                                        </ValidationProvider>
-                                    </div>
-                                </div>
-                                <div v-show="step == 3">
-                                    <div class="mb-12">
-                                        <ValidationProvider name="name" rules="required|min:3|max:100"
-                                                            v-slot="{ errors }">
-                                            <c-input
-                                                    v-model="signup_params.name"
-                                                    type="text"
-                                                    label="Full name"
-                                                    placeholder="John Smith"
-                                                    required/>
-                                            <div class="form-hint text-color-error">{{ errors[0] }}</div>
-                                        </ValidationProvider>
-                                    </div>
-                                    <div class="mb-12">
-                                        <c-label label="Mobile number"></c-label>
-                                        <VuePhoneNumberInput :default-country-code="results.country"
-                                                             :ignored-countries="['IL']"
-                                                             v-model="mobile"
-                                                             @update="signup_params.phone_number = $event.e164"
-                                                             required/>
-                                        <div class="form-hint text-color-error">{{ errors[0] }}</div>
-                                    </div>
-                                    <div class="mb-12">
-                                        <ValidationProvider name="password" rules="required|min:6|max:50"
-                                                            v-slot="{ errors }">
-                                            <c-input
-                                                    v-model="signup_params.password"
-                                                    type="password"
-                                                    label="Password"
-                                                    placeholder="Password"
-                                                    @onEnter="signup"
-                                                    required/>
-                                            <password v-model="signup_params.password" :strength-meter-only="true"/>
-                                            <div class="form-hint text-color-error">{{ errors[0] }}</div>
-                                        </ValidationProvider>
-                                    </div>
-                                </div>
-                                <div v-show="step <= 3" class="mt-24 mb-32">
-                                    <div class="tiles-wrap">
-                                        <div v-if="step > 1" class="tiles-item p-10" style="max-width: 30%;">
-                                            <div class="tiles-item-inner">
-                                                <c-button color="light" class="text-color-low" @click="back">
-                                                    <feather class="" type="arrow-left"></feather>
-                                                </c-button>
-                                            </div>
-                                        </div>
-                                        <div class="tiles-item"
-                                             v-bind:class="{ 'p-0': step == 1, 'p-10 max-70': step > 1 }">
-                                            <div class="tiles-item-inner">
-                                                <c-button :loading="loading" color="primary" @click="signup">
-                                                    <feather class="" type="arrow-right"></feather>
-                                                </c-button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                <div class="form-hint text-color-error">{{ errors[0] }}</div>
 
+                                            </ValidationProvider>
+                                        </div>
+                                    </div>
+                                    <div v-show="step == 2">
+                                        <div class="mb-12">
+                                            <ValidationProvider name="name" rules="required|min:5|max:100"
+                                                                v-slot="{ errors }">
+                                                <c-input
+                                                        v-model="signup_params.org_name"
+                                                        type="text"
+                                                        label="Company name"
+                                                        placeholder="Company, Inc."
+                                                        @onEnter="signup"
+                                                        @input="auto_fill_username"
+                                                        @deBounce="checkUsername"
+                                                        required/>
+                                                <div class="form-hint text-color-error">{{ errors[0] }}</div>
+                                            </ValidationProvider>
+                                        </div>
+                                        <div class="mb-12 input-username">
+                                            <c-label label="Company username"></c-label>
+
+                                            <ValidationProvider name="username"
+                                                                rules="required|alpha_num|min:4|max:20"
+                                                                v-slot="{ errors }">
+                                                <c-input type="text" disabled placeholder="dashboard.basma.ai/"
+                                                         form-group="mobile">
+                                                    <c-input
+                                                            v-model="signup_params.org_username"
+                                                            type="text"
+                                                            label="Company username"
+                                                            placeholder="username"
+                                                            label-hidden
+                                                            @onEnter="signup"
+                                                            @deBounce="checkUsername"
+                                                            @input="is_username_touched = true"
+                                                            :status="valid_username_status"
+                                                            required/>
+                                                </c-input>
+                                                <div class="form-hint text-color-error">{{ errors[0] }}</div>
+                                            </ValidationProvider>
+                                            <div v-if="!valid_username" class="form-hint text-color-error">The
+                                                username is already taken
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div v-show="step == 3">
+                                        <div class="mb-12">
+                                            <ValidationProvider name="name" rules="required|min:3|max:100"
+                                                                v-slot="{ errors }">
+                                                <c-input
+                                                        v-model="signup_params.name"
+                                                        type="text"
+                                                        label="Full name"
+                                                        placeholder="John Smith"
+                                                        required/>
+                                                <div class="form-hint text-color-error">{{ errors[0] }}</div>
+                                            </ValidationProvider>
+                                        </div>
+                                        <div class="mb-12">
+                                            <c-label label="Mobile number"></c-label>
+                                            <ValidationProvider name="text" rules="required|min:4"
+                                                                v-slot="{ errors }">
+                                                <VuePhoneNumberInput :default-country-code="results.country"
+                                                                     :ignored-countries="['IL']"
+                                                                     v-model="mobile"
+                                                                     @update="signup_params.phone_number = $event.e164"
+                                                                     required/>
+                                                <div class="form-hint text-color-error">{{ errors[0] }}</div>
+                                            </ValidationProvider>
+                                        </div>
+                                        <div class="mb-12">
+                                            <ValidationProvider name="password" rules="required|min:6|max:50"
+                                                                v-slot="{ errors }">
+                                                <c-input
+                                                        v-model="signup_params.password"
+                                                        type="password"
+                                                        label="Password"
+                                                        placeholder="Password"
+                                                        @onEnter="signup"
+                                                        required/>
+                                                <password v-model="signup_params.password"
+                                                          :strength-meter-only="true"/>
+                                                <div class="form-hint text-color-error">{{ errors[0] }}</div>
+                                            </ValidationProvider>
+                                        </div>
+                                    </div>
+                                    <div v-show="step <= 3" class="mt-24 mb-32">
+                                        <div class="tiles-wrap">
+                                            <div v-if="step > 1" class="tiles-item p-10" style="max-width: 30%;">
+                                                <div class="tiles-item-inner">
+                                                    <c-button color="light" class="text-color-low" @click="back">
+                                                        <feather class="" type="arrow-left"></feather>
+                                                    </c-button>
+                                                </div>
+                                            </div>
+                                            <div class="tiles-item"
+                                                 v-bind:class="{ 'p-0': step == 1, 'p-10 max-70': step > 1 }">
+                                                <div class="tiles-item-inner">
+                                                    <c-button :loading="loading" color="primary" @click="signup">
+                                                        <feather class="" type="arrow-right"></feather>
+                                                    </c-button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p v-show="step == 1"class="mt-24 text-xxs">
+                                            By signing up, I agree to basma.ai <a href="/terms#privacy-policy">Privacy
+                                            Policy</a> and <a href="/terms#terms-of-service">Terms of Service</a>.
+                                        </p>
+                                    </div>
+                                    <div v-show="step == 4" style="position: relative">
+                                        <div v-if="!otp_loading">
+                                            <v-otp-input
+                                                    ref="otpInput"
+                                                    input-classes="otp-input"
+                                                    separator="-"
+                                                    :num-inputs="4"
+                                                    :should-auto-focus="true"
+                                                    :is-input-num="true"
+                                                    @on-change="handleOnChange"
+                                                    @on-complete="handleOnComplete"
+                                            />
+                                            <p class="center-content text-xs mt-24">Didn't receive it? <span
+                                                    style="cursor: pointer; " class="text-color-primary"
+                                                    @click="resentOTP">click here</span>.
+                                            </p>
+                                        </div>
+                                        <Loading v-if="otp_loading"></Loading>
+                                    </div>
+                                    <div v-if="step == 5">
+                                        <p class="text-sm center-content">Your virtual branch is ready. <br>We'll
+                                            redirect
+                                            you to your
+                                            dashboard in <span class="h4 text-color-primary">{{countdown}}</span>..
+                                        </p>
+                                    </div>
                                 </div>
-                                <div v-show="step == 4">
-                                    <v-otp-input
-                                            ref="otpInput"
-                                            input-classes="otp-input"
-                                            separator="-"
-                                            :num-inputs="4"
-                                            :should-auto-focus="true"
-                                            :is-input-num="true"
-                                            @on-change="handleOnChange"
-                                            @on-complete="handleOnComplete"
-                                    />
-                                    <p class="center-content text-xs mt-24">Didn't receive it? <span
-                                            style="cursor: pointer; " class="text-color-primary" @click="resentOTP">click here</span>.
-                                    </p>
-                                </div>
-                                <div v-if="step == 5">
-                                    <p class="text-sm center-content">Your virtual branch is ready. <br>We'll redirect
-                                        you to your
-                                        dashboard in <span class="h4 text-color-primary">{{countdown}}</span>..</p>
-                                </div>
-                            </div>
+                            </ValidationObserver>
 
                             <div v-show="step == 1" class="signin-bottom has-top-divider">
                                 <div class="pt-32 text-xs center-content text-color-low">
@@ -207,6 +228,7 @@
     import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
     import CInput from '@/components/elements/Input.vue'
     import CButton from '@/components/elements/Button.vue'
+    import Loading from '@/components/elements/Loading.vue'
     import Fireworks from '@/components/elements/Fireworks.vue'
     import CButtonGroup from '@/components/elements/ButtonGroup.vue'
     import CLabel from '@/components/elements/FormLabel.vue'
@@ -223,12 +245,14 @@
             CLabel,
             VuePhoneNumberInput,
             Fireworks,
-            Password
+            Password,
+            Loading
         },
         mixins: [SectionProps],
         data() {
             return {
                 loading: false,
+                otp_loading: false,
                 step: 1,
                 mobile: '',
                 mobile_e164: '',
@@ -244,7 +268,7 @@
                     org_name: "",
                     org_username: "", //"some" + Math.random().toString().substr(3, 4),
                     email: "",
-                    username: '',
+                    username: "",
                     phone_number: "",
                     name: "",
                     password: ""
@@ -253,11 +277,19 @@
                 countdown: 3,
                 vendor: null,
                 pin: null,
-                captcha_token: null
+                captcha_token: null,
+                valid_username: true,
+                is_username_touched: false,
             }
         },
         computed: {
-
+            valid_username_status() {
+                if (this.signup_params.org_username == "") {
+                    return ''
+                } else {
+                    return this.valid_username ? 'success' : 'error'
+                }
+            }
         },
         watch: {
             step(val) {
@@ -297,6 +329,11 @@
             }
         },
         methods: {
+            auto_fill_username() {
+                if (!this.is_username_touched) {
+                    this.signup_params.org_username = this.signup_params.org_name.replace(/\(.+?\)/g, '').replace(/[^a-z0-9+]+/gi, '').replace('+', '').toLowerCase()
+                }
+            },
             reduceCountdown() {
                 let this_app = this;
 
@@ -313,29 +350,38 @@
             back() {
                 this.step--;
             },
-            signup() {
+            async signup() {
                 let this_app = this;
 
                 if (this.step == 3) {
-                    this_app.loading = true
 
-                    this_app.recaptcha().then((res) => {
-                        this_app.signup_params.username = this_app.signup_params.email;
-                        this_app.signup_params['g-recaptcha-response'] = this_app.captcha_token;
+                    const isValid = await this.$refs.observer.validate();
 
-                        this_app.axios.post(process.env.VUE_APP_API_URL + '/onboarding/join', this_app.signup_params).then(response => {
-                            this_app.loading = false
+                    if (isValid) {
+                        this_app.loading = true
 
-                            if (response.data.success) {
-                                this_app.step++;
-                                this_app.join = response.data.data.join
-                                this_app.vendor = response.data.data.join.vendor
-                            } else {
-                                // console.log(response.data.data.errors)
-                                this_app.handleErrors(response.data.data.errors)
-                            }
+                        this_app.recaptcha("signup").then((token) => {
+                            this_app.captcha_token = token;
+
+                            this_app.signup_params.username = this_app.signup_params.email;
+                            this_app.signup_params['g-recaptcha-response'] = this_app.captcha_token;
+
+                            this_app.axios.post(process.env.VUE_APP_API_URL + '/onboarding/join', this_app.signup_params).then(response => {
+                                this_app.loading = false
+
+                                if (response.data.success) {
+                                    this_app.step++;
+                                    this_app.join = response.data.data.join
+                                    this_app.vendor = response.data.data.join.vendor
+                                } else {
+                                    // console.log(response.data.data.errors)
+                                    this_app.handleErrors(response.data.data.errors)
+                                }
+                            })
                         })
-                    })
+                    } else {
+                        this_app.handleErrors(["Please check the errors in the form"]);
+                    }
 
                 } else {
                     this.step++;
@@ -346,20 +392,47 @@
                 await this.$recaptchaLoaded()
 
                 // Execute reCAPTCHA with action "login".
-                const token = await this.$recaptcha(view);
+                return await this.$recaptcha(view);
+            },
+            checkUsername() {
+                let this_app = this;
 
-                this.captcha_token = token;
+                if (this_app.signup_params.org_username == '') {
+                    return
+                }
 
-                return this.captcha_token;
+                this_app.loading = true
+
+                this_app.recaptcha("checkusername").then((token) => {
+                    this_app.captcha_token = token;
+
+                    let params = {
+                        org_username: this_app.signup_params.org_username,
+                        'g-recaptcha-response': this_app.captcha_token
+                    }
+
+                    this_app.axios.post(process.env.VUE_APP_API_URL + '/onboarding/check_org_username', params).then(response => {
+                        this_app.loading = false
+
+                        if (response.data.data.username_exists) {
+                            this_app.valid_username = false
+                        } else {
+                            this_app.valid_username = true
+                        }
+                    })
+                })
+
             },
             resentOTP() {
                 let this_app = this;
 
-                this_app.recaptcha().then((res) => {
+                this_app.recaptcha("resendotp").then((token) => {
+                    this_app.captcha_token = token;
+
                     let params = {
                         vendor_id: this_app.vendor.id,
                         'g-recaptcha-response': this_app.captcha_token
-                    }
+                    };
 
                     this_app.axios.post(process.env.VUE_APP_API_URL + '/onboarding/resend_otp', params).then(response => {
                         this_app.loading = false
@@ -381,8 +454,11 @@
                 // console.log('OTP completed: ', value);
                 let this_app = this;
                 this_app.pin = value;
+                this_app.otp_loading = true;
 
-                this_app.recaptcha().then((res) => {
+                this_app.recaptcha("sendotp").then((token) => {
+                    this_app.captcha_token = token;
+
                     let params = {
                         vendor_id: this_app.vendor.id,
                         pin: this_app.pin,
@@ -390,12 +466,13 @@
                     }
 
                     this_app.axios.post(process.env.VUE_APP_API_URL + '/onboarding/verify_otp', params).then(response => {
+                        this_app.otp_loading = false;
                         if (response.data.success) {
                             this_app.step++;
                         } else {
-                            if (null != response.data.data.errors){
+                            if (null != response.data.data.errors) {
                                 this_app.handleErrors(response.data.data.errors)
-                            }else{
+                            } else {
                                 this.showDialog({title: 'Error', message: "Invalid OTP", type: 'error', timeout: 3000})
                             }
                         }
@@ -495,7 +572,7 @@
 
     .input-username .form-group > div > input {
         width: 160px;
-        border-right: 1px solid #dddd;
+        border-right-width: 1px !important;
     }
 
     /* Chrome, Safari, Edge, Opera */

@@ -8,7 +8,7 @@
                 </div>
                 <div class="footer-bottom space-between text-xxs invert-order-desktop">
                     <c-footer-nav />
-                    <div class="footer-copyright">&copy; 2020 Basma AI, Inc. all rights reserved</div>
+                    <div class="footer-copyright">&copy; 2020 Basma AI, Inc.</div>
                 </div>
             </div>
         </div>
