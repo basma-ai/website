@@ -300,7 +300,7 @@
 
                         break;
                     case 2:
-                        this.sectionHeader.title = 'A little bit about your organization.';
+                        this.sectionHeader.title = 'Tell us a bit about your organization.';
                         this.sectionHeader.paragraph = "";
 
                         break;
@@ -315,7 +315,7 @@
 
                         break;
                     case 5:
-                        this.sectionHeader.title = "Congratulations!";
+                        this.sectionHeader.title = "Congratulations! 🎉";
                         this.sectionHeader.paragraph = "";
 
                         this.reduceCountdown();

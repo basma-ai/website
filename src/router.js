@@ -5,6 +5,7 @@ import Secondary from './views/Secondary.vue';
 import Terms from './views/Terms.vue';
 import Login from './views/Login.vue';
 import Signup from './views/Signup.vue';
+import Blog from './views/Blog.vue';
 
 Vue.use(Router);
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/terms',
       name: 'terms',
       component: Terms
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: Blog
     },
   ],
   mode: 'history'

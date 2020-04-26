@@ -2,11 +2,11 @@
     <nav class="footer-nav">
         <ul class="list-reset">
             <li>
-                <a href="mailto:hello@basma.ai">hello@basma.ai</a>
+                <router-link to="/blog/">Blog</router-link>
             </li>
-<!--            <li>-->
-<!--                <router-link to="/about-us/">About us</router-link>-->
-<!--            </li>-->
+            <li>
+                <a href="mailto:hello@basma.ai">Contact</a>
+            </li>
 <!--            <li>-->
 <!--                <router-link to="/faqs/">FAQ's</router-link>-->
 <!--            </li>-->

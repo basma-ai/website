@@ -26,14 +26,36 @@
                                 class="text-color-secondary">5 minutes</b></p>
                     </div>
                 </div>
+<!--                <div class="hero-figure illustration-element-05 reveal-from-top">-->
+<!--                    <c-image-->
+<!--                            class="has-shadow"-->
+<!--                            :src="require('@/assets/images/carousel-item-01.png')"-->
+<!--                            alt="Video"-->
+<!--                            :width="712"-->
+<!--                            :height="400"/>-->
+<!--                </div>-->
                 <div class="hero-figure illustration-element-05 reveal-from-top">
-                    <c-image
-                            class="has-shadow"
-                            :src="require('@/assets/images/carousel-item-01.png')"
-                            alt="Video"
-                            :width="712"
-                            :height="400"/>
+                    <a
+                            data-video="https://www.youtube.com/embed/aI68ip9MFMY?rel=0&autoplay=1"
+                            href="#"
+                            aria-controls="video-modal"
+                            @click.prevent="videoModalActive = true">
+                        <div class="has-shadow has-shadow-hover play-btn">
+                            <feather style="width: 33px" class="text-color-primary" type="play"></feather>
+                        </div>
+                        <c-image
+                                class="has-shadow"
+                                :src="require('@/assets/images/carousel-item-01.png')"
+                                alt="Video"
+                                :width="712"
+                                :height="400" />
+                    </a>
                 </div>
+                <c-modal
+                        id="video-modal"
+                        :active.sync="videoModalActive"
+                        video="https://www.youtube.com/embed/aI68ip9MFMY?rel=0&autoplay=1"
+                        video-tag="iframe" />
             </div>
         </div>
     </section>
@@ -42,7 +64,7 @@
 <script>
     import {SectionProps} from '@/utils/SectionProps.js'
     import CImage from '@/components/elements/Image.vue'
-    // import CModal from '@/components/elements/Modal.vue'
+    import CModal from '@/components/elements/Modal.vue'
     import CCarousel from '@/components/elements/Carousel.vue'
     import CCarouselItem from '@/components/elements/CarouselItem.vue'
 
@@ -51,7 +73,7 @@
         mixins: [SectionProps],
         components: {
             CImage,
-            // CModal,
+            CModal,
             CCarousel,
             CCarouselItem
         },
@@ -79,5 +101,20 @@
     }
     .hero-content h2 {
         min-height: 48px;
+    }
+    .play-btn {
+        background-color: rgb(255, 255, 255);
+        display: block;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        margin-left: -35px;
+        padding: 18px 22px;
+    }
+    .has-shadow-hover:hover {
+        -webkit-box-shadow: 0 32px 88px rgba(35, 46, 59, 0.6);
+        box-shadow: 0 32px 88px rgba(35, 46, 59, 0.6);
     }
 </style>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@bachdgvn/vue-otp-input": "^1.0.6",
+    "@tryghost/content-api": "^1.4.1",
     "axios": "^0.19.2",
     "connect-history-api-fallback": "^1.6.0",
     "core-js": "^2.6.5",

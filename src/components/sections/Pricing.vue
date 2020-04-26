@@ -81,6 +81,7 @@
                             </div>
                             <div class="pricing-item-cta mb-8">
                                 <router-link to="/signup/" class="button button-primary button-block">Start free trial</router-link>
+                                <p class="center-content text-xxs mb-0 text-color-low">No credit card required</p>
                             </div>
                         </div>
                     </div>
@@ -114,6 +115,7 @@
                             </div>
                             <div class="pricing-item-cta mb-8">
                                 <router-link to="/signup/" class="button button-primary button-block">Start free trial</router-link>
+                                <p class="center-content text-xxs mb-0 text-color-low">No credit card required</p>
                             </div>
                         </div>
                     </div>
@@ -147,6 +149,7 @@
                             </div>
                             <div class="pricing-item-cta mb-8">
                                 <router-link to="/signup/" class="button button-primary button-block">Start free trial</router-link>
+                                <p class="center-content text-xxs mb-0 text-color-low">No credit card required</p>
                             </div>
                         </div>
                     </div>

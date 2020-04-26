@@ -12,7 +12,8 @@
                     frameborder="0"
                     webkitAllowFullScreen
                     mozallowfullscreen
-                    allowfullscreen></iframe>
+                    allowfullscreen
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 <video v-else controls :src="video"></video>
             </div>
             <fragment v-else>
