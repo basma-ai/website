@@ -6,6 +6,8 @@ import Terms from './views/Terms.vue';
 import Login from './views/Login.vue';
 import Signup from './views/Signup.vue';
 import Blog from './views/Blog.vue';
+import Page from './views/Page.vue';
+import Tag from './views/Tag.vue';
 
 Vue.use(Router);
 
@@ -35,6 +37,18 @@ export default new Router({
       path: '/blog',
       name: 'blog',
       component: Blog
+    },
+    {
+      path: '/:id',
+      name: 'page',
+      component: Page,
+      props: true
+    },
+    {
+      path: '/:tag/:id',
+      name: 'tag',
+      component: Tag,
+      props: true
     },
   ],
   mode: 'history'

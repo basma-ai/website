@@ -11,7 +11,7 @@
 
 <script>
     // import layout
-    import CLayout from '@/layouts/LayoutDefault.vue'
+    import CLayout from '@/layouts/LayoutWithBanner.vue'
     // import sections
     import CHeroSplit from '@/components/sections/HeroSplit.vue'
     import CHeroFull from '@/components/sections/HeroFull.vue'

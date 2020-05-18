@@ -17,3 +17,11 @@ export async function getPosts() {
             console.error(err);
         });
 }
+
+export async function getPage(name, tags = ['']) {
+    return await api.pages
+        .read({slug: name}, {tags: tags})
+        .catch(err => {
+            console.error(err);
+        });
+}

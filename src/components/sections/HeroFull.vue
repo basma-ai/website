@@ -36,7 +36,7 @@
 <!--                </div>-->
                 <div class="hero-figure illustration-element-05 reveal-from-top">
                     <a
-                            data-video="https://www.youtube.com/embed/aI68ip9MFMY?rel=0&autoplay=1"
+                            data-video="https://www.youtube.com/embed/VAaEBordBe0?rel=0&autoplay=1"
                             href="#"
                             aria-controls="video-modal"
                             @click.prevent="videoModalActive = true">
@@ -54,7 +54,7 @@
                 <c-modal
                         id="video-modal"
                         :active.sync="videoModalActive"
-                        video="https://www.youtube.com/embed/aI68ip9MFMY?rel=0&autoplay=1"
+                        video="https://www.youtube.com/embed/VAaEBordBe0?rel=0&autoplay=1"
                         video-tag="iframe" />
             </div>
         </div>
@@ -65,6 +65,7 @@
     import {SectionProps} from '@/utils/SectionProps.js'
     import CImage from '@/components/elements/Image.vue'
     import CModal from '@/components/elements/Modal.vue'
+    import CButton from '@/components/elements/Button.vue'
     import CCarousel from '@/components/elements/Carousel.vue'
     import CCarouselItem from '@/components/elements/CarouselItem.vue'
 
@@ -75,7 +76,8 @@
             CImage,
             CModal,
             CCarousel,
-            CCarouselItem
+            CCarouselItem,
+            CButton
         },
         data() {
             return {

@@ -25,6 +25,9 @@
                             class="list-reset text-xxs"
                             :class="navPosition && `header-nav-${navPosition}`">
                             <li>
+                                <router-link to="/telehealth/" class="text-color-secondary-force">Telehealth</router-link>
+                            </li>
+                            <li>
                                 <router-link to="/login/" class="text-color-primary-force">Login</router-link>
                             </li>
                         </ul>
@@ -126,5 +129,11 @@ export default {
 <style>
     .text-color-primary-force {
         color: #FFB600 !important;
+    }
+    .text-color-secondary-force{
+        color: #4783B0 !important;
+    }
+    .icon {
+        height: 12px;
     }
 </style>
