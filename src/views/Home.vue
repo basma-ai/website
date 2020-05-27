@@ -23,6 +23,14 @@
 
     export default {
         name: 'Home',
+        metaInfo: {
+            // Children can override the title.
+            title: 'basma.ai',
+            // Result: My Page Title ← My Site
+            // If a child changes the title to "My Other Page Title",
+            // it will become: My Other Page Title ← My Site
+            titleTemplate: '%s - Launch your virtual branch now',
+        },
         components: {
             // CHeroSplit,
             CHeroFull,

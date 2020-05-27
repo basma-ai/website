@@ -28,6 +28,7 @@
     "vue-debounce": "^2.5.3",
     "vue-feather": "^1.0.0",
     "vue-loading-button": "^0.2.0",
+    "vue-meta": "^2.3.3",
     "vue-notifications": "^1.0.2",
     "vue-password-strength-meter": "^1.7.1",
     "vue-phone-number-input": "^1.1.7",
