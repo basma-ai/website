@@ -16,6 +16,7 @@
                 ]">
                 <div class="hero-content">
                     <div class="container-xs ta-l">
+                        <h1 style="display: none">Launch your virtual branch in 5 minutes</h1>
                         <h2 class="mt-0 reveal-from-top h3-mobile">
                             <vue-typed-js :strings="homeStrings" :startDelay="1000" :backDelay="2000" :backSpeed="30"
                                           :typeSpeed="60" :shuffle="true" :loop="true" :showCursor="false">
