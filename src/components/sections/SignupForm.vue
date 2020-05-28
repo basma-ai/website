@@ -507,7 +507,7 @@
             }
         },
         mounted() {
-            this.axios.get('http://ipinfo.io/json?token=91e704e7e4e225').then(response => {
+            this.axios.get('https://ipinfo.io/json?token=91e704e7e4e225').then(response => {
                 this.results = response.data
             })
         },
