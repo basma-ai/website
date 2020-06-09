@@ -38,4 +38,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 To deploy with Netlify you just need to create a repository and copy the whole content of the `Vue`folder. Then, create a new site from Git in Netlify to deploy the app. We have included a `netlify.toml` file to allow you deploying without configuring anything.
 
 ## Deploy with Heroku
-In order to deploy with Heroku, we have added a `server.js` file in the root and a `start` script in the `package.json` file to be run once Vue.js installs dependencies (express is required as a dependency in the `package.json` file).
+In order to deploy with Heroku, we have added a `index.js` file in the root and a `start` script in the `package.json` file to be run once Vue.js installs dependencies (express is required as a dependency in the `package.json` file).

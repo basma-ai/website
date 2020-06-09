@@ -1,0 +1,17 @@
+<template>
+    <fragment>
+        <c-header nav-position="right" hide-nav />
+        <main class="site-content">
+            <nuxt />
+        </main>
+    </fragment>
+</template>
+
+<script>
+import CHeader from '@/components/layout/Header.vue'
+export default {
+  components: {
+    CHeader
+  }
+}
+</script>
