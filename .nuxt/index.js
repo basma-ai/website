@@ -16,7 +16,6 @@ import nuxt_plugin_pluginmain_615f28e4 from 'nuxt_plugin_pluginmain_615f28e4' //
 import nuxt_plugin_axios_635ac67b from 'nuxt_plugin_axios_635ac67b' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_components_6fb0430c from 'nuxt_plugin_components_6fb0430c' // Source: ../plugins/components (mode: 'client')
 import nuxt_plugin_api_5e4622e4 from 'nuxt_plugin_api_5e4622e4' // Source: ../plugins/api (mode: 'client')
-import nuxt_plugin_ScrollReveal_3da99b90 from 'nuxt_plugin_ScrollReveal_3da99b90' // Source: ../plugins/ScrollReveal (mode: 'client')
 import nuxt_plugin_SectionProps_dbae5fbe from 'nuxt_plugin_SectionProps_dbae5fbe' // Source: ../plugins/SectionProps (mode: 'client')
 import nuxt_plugin_ga_34d435b2 from 'nuxt_plugin_ga_34d435b2' // Source: ../plugins/ga.js (mode: 'client')
 
@@ -175,10 +174,6 @@ async function createApp (ssrContext) {
 
   if (process.client && typeof nuxt_plugin_api_5e4622e4 === 'function') {
     await nuxt_plugin_api_5e4622e4(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_ScrollReveal_3da99b90 === 'function') {
-    await nuxt_plugin_ScrollReveal_3da99b90(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_SectionProps_dbae5fbe === 'function') {

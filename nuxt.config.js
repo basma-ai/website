@@ -67,10 +67,10 @@ module.exports = {
       src: "~/plugins/api",
       ssr: false
     },
-    {
-      src: "~/plugins/ScrollReveal",
-      ssr: false
-    },
+    // {
+    //   src: "~/plugins/ScrollReveal",
+    //   ssr: false
+    // },
     {
       src: "~/plugins/SectionProps",
       ssr: false
