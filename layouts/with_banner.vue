@@ -10,7 +10,7 @@
         <main class="site-content">
             <nuxt />
         </main>
-        <c-footer class="illustration-section-06"/>
+        <c-footer />
     </fragment>
 </template>
 
