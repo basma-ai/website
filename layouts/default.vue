@@ -1,10 +1,12 @@
 <template>
     <fragment>
-        <c-header nav-position="right" />
-        <main class="site-content">
-            <nuxt />
-        </main>
-        <c-footer />
+        <div class="body-wrap">
+            <c-header nav-position="right" />
+            <main class="site-content">
+                <nuxt />
+            </main>
+            <c-footer />
+        </div>
     </fragment>
 </template>
 

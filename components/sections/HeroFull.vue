@@ -42,7 +42,7 @@
                             aria-controls="video-modal"
                             @click.prevent="videoModalActive = true">
                         <div class="has-shadow has-shadow-hover play-btn">
-                            <feather style="width: 33px" class="text-color-primary" type="play"></feather>
+                            <feather style="width: 33px !important;display: block;" class="text-color-primary" type="play"></feather>
                         </div>
                         <c-image
                                 class="has-shadow"

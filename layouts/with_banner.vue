@@ -1,16 +1,18 @@
 <template>
     <fragment>
-        <div id="covid" class="p-8">
-            <router-link to="/covid19/">
-                <span class="text-xs mr-8">Support your customers during COVID-19 </span>
-                <c-button size="sm">Learn more</c-button>
-            </router-link>
+        <div class="body-wrap">
+            <div id="covid" class="p-8">
+                <router-link to="/covid19/">
+                    <span class="text-xs mr-8">Support your customers during COVID-19 </span>
+                    <c-button size="sm">Learn more</c-button>
+                </router-link>
+            </div>
+            <c-header nav-position="right"/>
+            <main class="site-content">
+                <nuxt/>
+            </main>
+            <c-footer class="illustration-section-06"/>
         </div>
-        <c-header nav-position="right"/>
-        <main class="site-content">
-            <nuxt />
-        </main>
-        <c-footer />
     </fragment>
 </template>
 
@@ -24,6 +26,12 @@
             CHeader,
             CFooter,
             CButton
+        },
+        created() {
+
+        },
+        mounted() {
+
         }
     }
 </script>
