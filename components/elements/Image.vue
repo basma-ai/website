@@ -57,8 +57,8 @@ export default {
     }
   },
   mounted() {
-    const placeholderImage = document.createElement('img')
-    this.handlePlaceholder(this.$el, placeholderImage)
+    // const placeholderImage = document.createElement('img')
+    // this.handlePlaceholder(this.$el, placeholderImage)
   }
 }
 </script>
