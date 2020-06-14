@@ -46,7 +46,7 @@
                         </div>
                         <c-image
                                 class="has-shadow"
-                                :src="require('@/assets/images/carousel-item-01.webp')"
+                                :src="require('@/assets/images/carousel-item-01.jpg')"
                                 alt="Video"
                                 :width="712"
                                 :height="400" />
