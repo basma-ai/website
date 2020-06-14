@@ -88,14 +88,6 @@ Vue.use(VueReCaptcha, {
     }
 })
 
-import VueAnalytics from 'vue-analytics';
-
-// Configuration VueAnalytics
-// Vue.use(VueAnalytics, {
-//     id: 'UA-163382802-1',
-//     router
-// });
-
 // VueDebounce
 import vueDebounce from 'vue-debounce'
 Vue.use(vueDebounce)
@@ -106,8 +98,3 @@ Vue.use(VueMeta, {
     // optional pluginOptions
     refreshOnceOnNavigation: true
 })
-
-// new Vue({
-//     router,
-//     render: h => h(App)
-// }).$mount('#app');

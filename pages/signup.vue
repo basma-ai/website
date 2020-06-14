@@ -14,15 +14,11 @@
         },
         created() {
         },
-        head () {
+        metaInfo () {
             return {
-                title: "Setup your virtual branch in 5 minutes",
-                titleTemplate: '%s | basma.ai',
-                meta: [
-                    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-                    { hid: 'description', name: 'description', content: 'You are 5 minutes away from launching your virtual branch.' }
-                ]
+                title: 'Signup',
+                titleTemplate: '%s | basma.ai'
             }
-        }
+        },
     }
 </script>

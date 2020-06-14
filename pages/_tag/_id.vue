@@ -56,16 +56,24 @@
         },
         data() {
             return {
-                page: null
+                page: null,
+                title: ''
             }
         },
         created() {
             this.getPoge();
         },
+        metaInfo () {
+            return {
+                title: this.title,
+                titleTemplate: '%s | basma.ai'
+            }
+        },
         methods:{
             async getPoge() {
                 const page = await getPage(this.$route.params.id, [this.$route.params.tag]);
                 this.page = page;
+                this.title = page.title;
             }
         }
     }

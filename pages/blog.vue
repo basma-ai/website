@@ -88,6 +88,12 @@
         created() {
             this.getPosts();
         },
+        metaInfo () {
+            return {
+                title: 'Blog',
+                titleTemplate: '%s | basma.ai'
+            }
+        },
         methods: {
             async getPosts() {
                 const posts = await getPosts();

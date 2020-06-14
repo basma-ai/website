@@ -13,6 +13,12 @@
             CLoginForm
         },
         created() {
-        }
+        },
+        metaInfo () {
+            return {
+                title: 'Login',
+                titleTemplate: '%s | basma.ai'
+            }
+        },
     }
 </script>
