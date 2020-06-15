@@ -27,6 +27,7 @@ module.exports = {
                 {charset: "utf-8"},
                 {"http-equiv": "X-UA-Compatible", content: "IE=edge"},
                 {name: "viewport", content: "width=device-width, initial-scale=1"},
+                {name: "robots", content: "index,follow"},
                 {hid: "keywords", name: "keywords", content: "call center,contact center,customer service,video call center,video chat,virtual branch,chatbot,whatsapp bot,covid19"},
                 {
                     hid: "description",
