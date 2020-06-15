@@ -340,7 +340,7 @@
 
                 if (this_app.countdown == 1) {
                     if (process.client) {
-                        window.location = process.env.VUE_APP_DASHBOARD_URL + '/' + this.vendor.username
+                        window.location = process.env.VUE_APP_DASHBOARD_URL + '/' + this.vendor.username + '?email=' + this.signup_params.email
                     }
                     return;
                 }

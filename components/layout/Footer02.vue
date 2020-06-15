@@ -6,56 +6,50 @@
                     <div class="footer-blocks">
                         <div class="footer-block">
                             <c-logo class="mb-16" />
-                            <div class="footer-copyright">&copy; 2020 Frame, all rights reserved</div>
+                            <div class="footer-copyright">&copy; 2020 Basma AI, Inc.</div>
                         </div>
                         <div class="footer-block">
-                            <div class="footer-block-title">Company</div>
+                            <div class="footer-block-title">Top Features</div>
                             <ul class="list-reset">
                                 <li>
-                                    <a href="#">Dummy text used</a>
+                                    <router-link to="/smart-call-routing/">Smart Call Routing</router-link>
                                 </li>
                                 <li>
-                                    <a href="#">The purpose of lorem</a>
+                                    <router-link to="/custom-fields/">Custom Fields</router-link>
                                 </li>
                                 <li>
-                                    <a href="#">Filler text can be very useful</a>
-                                </li>
-                                <li>
-                                    <a href="#">Be on design</a>
+                                    <router-link to="/request-signature/">Request Signature</router-link>
                                 </li>
                             </ul>
                         </div>
                         <div class="footer-block">
-                            <div class="footer-block-title">Uses cases</div>
+                            <div class="footer-block-title">Solutions By Industry</div>
                             <ul class="list-reset">
                                 <li>
-                                    <a href="#">Consectetur adipiscing</a>
+                                    <router-link to="/telehealth/">Healthcare</router-link>
                                 </li>
                                 <li>
-                                    <a href="#">Lorem Ipsum is place</a>
+                                    <router-link to="/banking/">Banking</router-link>
                                 </li>
                                 <li>
-                                    <a href="#">Excepteur sint</a>
-                                </li>
-                                <li>
-                                    <a href="#">Occaecat cupidatat</a>
+                                    <router-link to="/insurance/">Insurance</router-link>
                                 </li>
                             </ul>
                         </div>
                         <div class="footer-block">
-                            <div class="footer-block-title">Docs</div>
+                            <div class="footer-block-title">Resources</div>
                             <ul class="list-reset mb-0">
                                 <li>
-                                    <a href="#">The purpose of lorem</a>
+                                    <router-link to="/blog/">Blog</router-link>
                                 </li>
                                 <li>
-                                    <a href="#">Dummy text used</a>
+                                    <router-link to="/security/">Security</router-link>
                                 </li>
                                 <li>
-                                    <a href="#">Excepteur sint</a>
+                                    <router-link to="/faq/">FAQ</router-link>
                                 </li>
                                 <li>
-                                    <a href="#">Occaecat cupidatat</a>
+                                    <a target="_blank" href="http://status.basma.ai">Status</a>
                                 </li>
                             </ul>
                         </div>

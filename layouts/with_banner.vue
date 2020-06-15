@@ -18,7 +18,7 @@
 
 <script>
     import CHeader from '@/components/layout/Header.vue'
-    import CFooter from '@/components/layout/Footer.vue'
+    import CFooter from '@/components/layout/Footer02.vue'
     import CButton from '@/components/elements/Button.vue'
 
     export default {
