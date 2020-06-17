@@ -34,6 +34,9 @@
                                 <li>
                                     <router-link to="/insurance/">Insurance</router-link>
                                 </li>
+                                <li>
+                                    <router-link to="/virtual-call-center/">Virtual Call Center</router-link>
+                                </li>
                             </ul>
                         </div>
                         <div class="footer-block">

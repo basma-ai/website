@@ -12,56 +12,61 @@
     <url>
         <loc>https://basma.ai/signup</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/login</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/blog</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/covid19</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/telehealth</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/smart-call-routing</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/custom-fields</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/request-signature</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/banking</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/insurance</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://basma.ai/virtual-call-center</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://basma.ai/faq</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
 </urlset>
