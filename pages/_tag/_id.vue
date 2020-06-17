@@ -56,8 +56,7 @@
         },
         data() {
             return {
-                page: null,
-                title: ''
+                page: {},
             }
         },
         created() {
@@ -65,15 +64,30 @@
         },
         metaInfo () {
             return {
-                title: this.title,
-                titleTemplate: '%s | basma.ai'
+                title: this.page.title,
+                titleTemplate: '%s | basma.ai',
+                meta: [
+                    {   "data-hid": "og:title",
+                        name: "og:title",
+                        content: this.page.title + " | basma.ai'"
+                    },
+                    {
+                        "data-hid": "description",
+                        name: "description",
+                        content: this.page.meta_description
+                    },
+                    {
+                        "data-hid": "og:description",
+                        name: "og:description",
+                        content: this.page.meta_description
+                    },
+                ]
             }
         },
         methods:{
             async getPoge() {
                 const page = await getPage(this.$route.params.id, [this.$route.params.tag]);
                 this.page = page;
-                this.title = page.title;
             }
         }
     }

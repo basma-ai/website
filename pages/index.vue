@@ -2,7 +2,7 @@
     <fragment>
         <c-hero-full class="illustration-section-01"/>
         <c-clients top-divider bottom-divider/>
-<!--        <c-features-split invert-mobile image-fill class="illustration-section-03"/>-->
+        <!--        <c-features-split invert-mobile image-fill class="illustration-section-03"/>-->
         <c-features-tiles class="gradient-section"/>
         <c-pricing has-bg-color top-divider pricing-switcher/>
         <c-cta has-bg-color split class="illustration-element-08"/>
@@ -40,6 +40,28 @@
             CCta
         },
         created() {
+        },
+        metaInfo() {
+            return {
+                title: "Launch your virtual branch now",
+                titleTemplate: '%s | basma.ai',
+                meta: [
+                    {
+                        hid: "og:title",
+                        name: "og:title",
+                        content: "Launch your virtual branch now | basma.ai"},
+                    {
+                        hid: "description",
+                        name: "description",
+                        content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
+                    },
+                    {
+                        hid: "og:description",
+                        name: "og:description",
+                        content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
+                    }
+                ]
+            }
         }
     }
 </script>

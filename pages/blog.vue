@@ -88,10 +88,26 @@
         created() {
             this.getPosts();
         },
-        metaInfo () {
+        metaInfo() {
             return {
                 title: 'Blog',
-                titleTemplate: '%s | basma.ai'
+                titleTemplate: '%s | basma.ai',
+                meta: [
+                    {
+                        hid: "og:title",
+                        name: "og:title",
+                        content: "Blog | basma.ai"},
+                    {
+                        hid: "description",
+                        name: "description",
+                        content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
+                    },
+                    {
+                        hid: "og:description",
+                        name: "og:description",
+                        content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
+                    }
+                ]
             }
         },
         methods: {
