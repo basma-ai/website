@@ -52,7 +52,7 @@
                                     <router-link to="/faq/">FAQ</router-link>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="http://status.basma.ai">Status</a>
+                                    <a target="_blank" href="https://status.basma.ai/sp/pv/OEXza2ZKaSVOXGjeai0UoNLWF5ugxke7O1j6qcnV2j4=">Status</a>
                                 </li>
                             </ul>
                         </div>
