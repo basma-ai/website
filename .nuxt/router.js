@@ -6,7 +6,6 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _0bac1bc1 = () => interopDefault(import('../pages/blog.vue' /* webpackChunkName: "pages/blog" */))
 const _6877884c = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _0dc5a712 = () => interopDefault(import('../pages/signup.vue' /* webpackChunkName: "pages/signup" */))
-const _a7cb5210 = () => interopDefault(import('../pages/terms.vue' /* webpackChunkName: "pages/terms" */))
 const _021c98c3 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _a320202a = () => interopDefault(import('../pages/_id.vue' /* webpackChunkName: "pages/_id" */))
 const _b8d9d1b6 = () => interopDefault(import('../pages/_tag/_id.vue' /* webpackChunkName: "pages/_tag/_id" */))
@@ -39,10 +38,6 @@ export const routerOptions = {
     path: "/signup",
     component: _0dc5a712,
     name: "signup"
-  }, {
-    path: "/terms",
-    component: _a7cb5210,
-    name: "terms"
   }, {
     path: "/",
     component: _021c98c3,

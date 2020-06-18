@@ -92,9 +92,9 @@ Vue.use(VueReCaptcha, {
 import vueDebounce from 'vue-debounce'
 Vue.use(vueDebounce)
 
-// Vue Meta
-import VueMeta from 'vue-meta'
-Vue.use(VueMeta, {
-    // optional pluginOptions
-    refreshOnceOnNavigation: true
-})
+// // Vue Meta
+// import VueMeta from 'vue-meta'
+// Vue.use(VueMeta, {
+//     // optional pluginOptions
+//     refreshOnceOnNavigation: true
+// })

@@ -12,9 +12,7 @@
         components: {
             CLoginForm
         },
-        created() {
-        },
-        metaInfo() {
+        head () {
             return {
                 title: "Login",
                 titleTemplate: '%s | basma.ai',
@@ -26,12 +24,12 @@
                     {
                         hid: "description",
                         name: "description",
-                        content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
+                        content: "Login to your account at basma.ai, the virtual branch that makes it easy to serve your customers from anywhere. Let's go virtual!"
                     },
                     {
                         hid: "og:description",
                         name: "og:description",
-                        content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
+                        content: "Login to your account at basma.ai, the virtual branch that makes it easy to serve your customers from anywhere. Let's go virtual!"
                     }
                 ]
             }

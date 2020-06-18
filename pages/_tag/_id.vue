@@ -30,12 +30,12 @@
     import CAccordion from '@/components/elements/Accordion.vue'
     import CAccordionItem from '@/components/elements/AccordionItem.vue'
 
-    import { getPage } from "../../plugins/api";
+    import {getPage} from "../../plugins/api";
     import Loading from '@/components/elements/Loading.vue'
 
     export default {
-        props: ['tag','id'],
-        name: 'Secondary',
+        props: ['tag', 'id'],
+        name: 'Tag',
         layout: 'default',
         components: {
             CSectionHeader,
@@ -59,35 +59,36 @@
                 page: {},
             }
         },
-        created() {
-            this.getPoge();
+        async asyncData({ params }) {
+            try {
+                const page = await getPage(params.id, [params.tag]);
+                return {
+                    page
+                }
+            } catch (error) {
+            }
         },
-        metaInfo () {
+        head() {
             return {
                 title: this.page.title,
                 titleTemplate: '%s | basma.ai',
                 meta: [
-                    {   "data-hid": "og:title",
+                    {
+                        hid: "og:title",
                         name: "og:title",
                         content: this.page.title + " | basma.ai'"
                     },
                     {
-                        "data-hid": "description",
+                        hid: "description",
                         name: "description",
                         content: this.page.meta_description
                     },
                     {
-                        "data-hid": "og:description",
+                        hid: "og:description",
                         name: "og:description",
                         content: this.page.meta_description
                     },
                 ]
-            }
-        },
-        methods:{
-            async getPoge() {
-                const page = await getPage(this.$route.params.id, [this.$route.params.tag]);
-                this.page = page;
             }
         }
     }

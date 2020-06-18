@@ -28,6 +28,20 @@ module.exports = {
                 {name: "viewport", content: "width=device-width, initial-scale=1"},
                 {name: "robots", content: "index,follow"},
                 {hid: "keywords", name: "keywords", content: "call center,contact center,customer service,video call center,video chat,virtual branch,chatbot,whatsapp bot,covid19"},
+                {
+                    hid: "og:title",
+                    name: "og:title",
+                    content: "Launch your virtual branch now | basma.ai"},
+                {
+                    hid: "description",
+                    name: "description",
+                    content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
+                },
+                {
+                    hid: "og:description",
+                    name: "og:description",
+                    content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
+                },
                 {name: "og:site_name", content: "basma.ai"},
                 {
                     name: "og:image",
@@ -39,7 +53,6 @@ module.exports = {
                 {name: "og:image:width", content: "300"},
                 {name: "og:image:height", content: "300"},
                 {name: "og:url", content: "https://basma.ai"},
-                {name: "robots", content: "index, follow"}
             ],
             link: [
                 {rel: "icon", type: "image/x-icon", href: "/favicon.ico"},

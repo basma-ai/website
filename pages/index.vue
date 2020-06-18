@@ -22,14 +22,6 @@
     export default {
         name: 'Home',
         layout: 'with_banner',
-        metaInfo: {
-            // Children can override the title.
-            title: 'basma.ai',
-            // Result: My Page Title ← My Site
-            // If a child changes the title to "My Other Page Title",
-            // it will become: My Other Page Title ← My Site
-            titleTemplate: 'Launch your virtual branch now | %s',
-        },
         components: {
             // CHeroSplit,
             CHeroFull,
@@ -41,26 +33,10 @@
         },
         created() {
         },
-        metaInfo() {
+        head () {
             return {
                 title: "Launch your virtual branch now",
                 titleTemplate: '%s | basma.ai',
-                meta: [
-                    {
-                        hid: "og:title",
-                        name: "og:title",
-                        content: "Launch your virtual branch now | basma.ai"},
-                    {
-                        hid: "description",
-                        name: "description",
-                        content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
-                    },
-                    {
-                        hid: "og:description",
-                        name: "og:description",
-                        content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
-                    }
-                ]
             }
         }
     }

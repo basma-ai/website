@@ -12,9 +12,7 @@
         components: {
             CSignupForm
         },
-        created() {
-        },
-        metaInfo() {
+        head() {
             return {
                 title: "Signup",
                 titleTemplate: '%s | basma.ai',

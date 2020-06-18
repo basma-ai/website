@@ -44,11 +44,11 @@
     import CAccordion from '@/components/elements/Accordion.vue'
     import CAccordionItem from '@/components/elements/AccordionItem.vue'
 
-    import {getPosts} from "../plugins/api";
+    import {getPage, getPosts} from "../plugins/api";
     import Loading from '@/components/elements/Loading.vue'
 
     export default {
-        name: 'Secondary',
+        name: 'Blog',
         layout: 'default',
         components: {
             CSectionHeader,
@@ -85,10 +85,16 @@
                 posts: []
             }
         },
-        created() {
-            this.getPosts();
+        async asyncData() {
+            try {
+                const posts = await getPosts();
+                return {
+                    posts
+                }
+            } catch (error) {
+            }
         },
-        metaInfo() {
+        head () {
             return {
                 title: 'Blog',
                 titleTemplate: '%s | basma.ai',
@@ -108,12 +114,6 @@
                         content: "Setup your virtual branch and video call center in less than 5 minutes. No technical experience required."
                     }
                 ]
-            }
-        },
-        methods: {
-            async getPosts() {
-                const posts = await getPosts();
-                this.posts = posts;
             }
         }
     }

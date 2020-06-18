@@ -35,7 +35,7 @@
 
     export default {
         props: ['id'],
-        name: 'Secondary',
+        name: 'Post',
         layout: 'default',
         components: {
             CSectionHeader,
@@ -59,35 +59,35 @@
                 page: {}
             }
         },
-        created() {
-            this.getPoge();
+        async asyncData({ params }) {
+            try {
+                const page = await getPage(params.id);
+                return {
+                    page
+                }
+            } catch (error) {
+            }
         },
-        metaInfo () {
+        head () {
             return {
                 title: this.page.title,
                 titleTemplate: '%s | basma.ai',
                 meta: [
-                    {   "data-hid": "og:title",
+                    {   hid: "og:title",
                         name: "og:title",
                         content: this.page.title + " | basma.ai'"
                     },
                     {
-                        "data-hid": "description",
+                        hid: "description",
                         name: "description",
                         content: this.page.meta_description
                     },
                     {
-                        "data-hid": "og:description",
+                        hid: "og:description",
                         name: "og:description",
                         content: this.page.meta_description
                     },
                 ]
-            }
-        },
-        methods:{
-            async getPoge() {
-                const page = await getPage(this.$route.params.id);
-                this.page = page;
             }
         }
     }
