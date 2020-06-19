@@ -184,8 +184,8 @@
                                 </div>
                             </div>
                             <div class="pricing-item-cta mb-8">
-                                <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/basmadotai/15min?hide_event_type_details=1'});return false;" class="button button-primary button-block">Schedule a meeting</a>
-                                <p class="center-content text-xxs mb-0 text-color-low">No credit card required</p>
+                                <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/basmadotai/15min?hide_event_type_details=1'});return false;" class="button button-secondary button-block">Schedule a meeting</a>
+                                <p class="center-content text-xxs mb-0 text-color-low" style="visibility: hidden">No credit card required</p>
                             </div>
                         </div>
                     </div>
