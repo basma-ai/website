@@ -5,8 +5,12 @@
                 <div class="footer-top text-xxs">
                     <div class="footer-blocks">
                         <div class="footer-block">
-                            <c-logo class="mb-16" />
-                            <div class="footer-copyright">&copy; 2020 Basma AI, Inc.</div>
+                            <div class="footer-block-title">Platform</div>
+                            <ul class="list-reset">
+                                <li>
+                                    <router-link to="/pricing/">Pricing</router-link>
+                                </li>
+                            </ul>
                         </div>
                         <div class="footer-block">
                             <div class="footer-block-title">Top Features</div>
@@ -40,16 +44,30 @@
                             </ul>
                         </div>
                         <div class="footer-block">
+                            <div class="footer-block-title">Legal</div>
+                            <ul class="list-reset">
+                                <li>
+                                    <router-link to="/terms#terms-of-service/">Terms and Conditions</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/terms#privacy-policy/">Privacy Policy</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/security/">Security</router-link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-block">
                             <div class="footer-block-title">Resources</div>
                             <ul class="list-reset mb-0">
                                 <li>
                                     <router-link to="/blog/">Blog</router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/security/">Security</router-link>
+                                    <router-link to="/faq/">FAQ</router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/faq/">FAQ</router-link>
+                                    <a target="_blank" href="https://docs.basma.ai">Documentation</a>
                                 </li>
                                 <li>
                                     <a target="_blank" href="https://status.basma.ai/sp/pv/OEXza2ZKaSVOXGjeai0UoNLWF5ugxke7O1j6qcnV2j4=">Status</a>
@@ -59,7 +77,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom space-between center-content-mobile text-xxs">
-                    <c-footer-nav />
+                    <c-logo />
                     <c-footer-social />
                 </div>
             </div>
