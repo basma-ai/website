@@ -17,12 +17,12 @@
                 ]" style="background-color: white">
                 <div class="cta-slogan">
                     <h3 class="m-0">
-                        <b class="text-color-primary">Enterprise</b> and want to go wild?
+                        Want to learn more about <b class="text-color-primary">Basma</b>?
                     </h3>
                 </div>
                 <div class="cta-action">
-                    <c-button tag="a" color="primary" wide-mobile href="mailto:hello@basma.ai">
-                        Get Quote
+                    <c-button tag="a" color="primary" wide-mobile onclick="Calendly.initPopupWidget({url: 'https://calendly.com/basmadotai/15min?hide_event_type_details=1'});return false;">
+                        Schedule time with us
                     </c-button>
                 </div>
             </div>

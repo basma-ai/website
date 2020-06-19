@@ -15,7 +15,7 @@ module.exports = {
     /*
      ** Headers of the page
      */
-    head: function() {
+    head: function () {
         return {
             titleTemplate: "%s | basma.ai",
             title: "Launch your virtual branch now",
@@ -27,11 +27,16 @@ module.exports = {
                 {"http-equiv": "X-UA-Compatible", content: "IE=edge"},
                 {name: "viewport", content: "width=device-width, initial-scale=1"},
                 {name: "robots", content: "index,follow"},
-                {hid: "keywords", name: "keywords", content: "call center,contact center,customer service,video call center,video chat,virtual branch,chatbot,whatsapp bot,covid19"},
+                {
+                    hid: "keywords",
+                    name: "keywords",
+                    content: "call center,contact center,customer service,video call center,video chat,virtual branch,chatbot,whatsapp bot,covid19"
+                },
                 {
                     hid: "og:title",
                     name: "og:title",
-                    content: "Launch your virtual branch now | basma.ai"},
+                    content: "Launch your virtual branch now | basma.ai"
+                },
                 {
                     hid: "description",
                     name: "description",
@@ -57,18 +62,22 @@ module.exports = {
             link: [
                 {rel: "icon", type: "image/x-icon", href: "/favicon.ico"},
                 {rel: "canonical", href: "https://basma.ai" + this.$route.path},
+                {rel: 'stylesheet', href: 'https://assets.calendly.com/assets/external/widget.css'}
             ],
-            script: [{
-                type: 'application/ld+json',
-                json: {
-                    "@context": "http://schema.org",
-                    "@type": "Organization",
-                    "name": "basma.ai",
-                    "url": "https://basma.ai",
-                    "address": "",
-                    "sameAs": ["https://facebook.com/basmadotai", "https://instagram.com/basmadotai", "https://twitter.com/basmadotai", "https://youtube.com/channel/UCjuatxjiXkSuL6xpqhtk_4A", "https://linkedin.com/company/basmadotai"]
-                }
-            }]
+            script: [
+                {
+                    type: 'application/ld+json',
+                    json: {
+                        "@context": "http://schema.org",
+                        "@type": "Organization",
+                        "name": "basma.ai",
+                        "url": "https://basma.ai",
+                        "address": "",
+                        "sameAs": ["https://facebook.com/basmadotai", "https://instagram.com/basmadotai", "https://twitter.com/basmadotai", "https://youtube.com/channel/UCjuatxjiXkSuL6xpqhtk_4A", "https://linkedin.com/company/basmadotai"]
+                    }
+                },
+                {src: 'https://assets.calendly.com/assets/external/widget.js'}
+            ]
         }
     },
     /*

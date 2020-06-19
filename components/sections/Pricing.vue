@@ -61,7 +61,7 @@
                                         <span class="pricing-item-price-amount h1">{{ getPricingData(this.priceOutput.plan1, 1) }}</span>
                                         <span class="text-sm">{{ getPricingData(this.priceOutput.plan1, 2) }}</span>
                                     </div>
-                                    <div class="text-color-low text-xs">Basic plan for starting small</div>
+                                    <div class="text-color-low text-xs">Basic plan for small business</div>
                                 </div>
                                 <div class="pricing-item-features mb-40">
 <!--                                    <div class="pricing-item-features-title text-xs text-color-high mb-24">-->
@@ -76,6 +76,7 @@
                                         <li>Custom Fields</li>
                                         <li>Chat box</li>
                                         <li>Exchange Files</li>
+                                        <li>APIs</li>
                                     </ul>
                                 </div>
                             </div>
@@ -110,6 +111,7 @@
                                         <li class="is-checked">Custom Fields</li>
                                         <li>Chat box</li>
                                         <li>Exchange Files</li>
+                                        <li>APIs</li>
                                     </ul>
                                 </div>
                             </div>
@@ -144,6 +146,7 @@
                                         <li class="is-checked">Custom Fields</li>
                                         <li class="is-checked">Chat box</li>
                                         <li class="is-checked">Exchange Files</li>
+                                        <li>APIs</li>
                                     </ul>
                                 </div>
                             </div>
@@ -153,6 +156,40 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="tiles-item reveal-from-top enterprise" data-reveal-delay="400">
+                        <div class="tiles-item-inner has-shadow">
+                            <div class="pricing-item-content">
+                                <div class="pricing-item-header pb-16 mb-24">
+                                    <div class="pricing-item-price">
+                                        <span class="pricing-item-price-amount h2">Custom</span>
+                                    </div>
+                                    <div class="text-color-low text-xs">Enterprise for government & and big organisations</div>
+                                </div>
+                                <div class="pricing-item-features mb-40">
+                                    <!--                                    <div class="pricing-item-features-title text-xs text-color-high mb-24">-->
+                                    <!--                                        What's included-->
+                                    <!--                                    </div>-->
+                                    <ul class="pricing-item-features-list list-reset text-xs mb-32">
+                                        <li class="is-checked">100,000min/month</li>
+                                        <li class="is-checked">$0.1/min per extra min</li>
+                                        <li class="is-checked">Unlimited Users</li>
+                                        <li class="is-checked">Unlimited Groups</li>
+                                        <li class="is-checked">Unlimited Services</li>
+                                        <li class="is-checked">Custom Fields</li>
+                                        <li class="is-checked">Chat box</li>
+                                        <li class="is-checked">Exchange Files</li>
+                                        <li class="is-checked">APIs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pricing-item-cta mb-8">
+                                <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/basmadotai/15min?hide_event_type_details=1'});return false;" class="button button-primary button-block">Schedule a meeting</a>
+                                <p class="center-content text-xxs mb-0 text-color-low">No credit card required</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div>
@@ -254,10 +291,14 @@
     }
 
     .pricing.section .silver .tiles-item-inner {
-        border-color: #1089F8;
+        border-color: #BF9562;
     }
 
     .pricing.section .platinum .tiles-item-inner {
+        border-color: #1089F8;
+    }
+
+    .pricing.section .enterprise .tiles-item-inner {
         border-color: #feba1d;
     }
 </style>
