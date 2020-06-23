@@ -10,6 +10,9 @@
                                 <li>
                                     <router-link to="/pricing/">Pricing</router-link>
                                 </li>
+                                <li>
+                                    <a target="_blank" href="https://docs.basma.ai">API</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="footer-block">
@@ -30,6 +33,9 @@
                             <div class="footer-block-title">Solutions By Industry</div>
                             <ul class="list-reset">
                                 <li>
+                                    <router-link to="/government/">Government</router-link>
+                                </li>
+                                <li>
                                     <router-link to="/telehealth/">Healthcare</router-link>
                                 </li>
                                 <li>
@@ -39,7 +45,7 @@
                                     <router-link to="/insurance/">Insurance</router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/virtual-call-center/">Virtual Call Center</router-link>
+                                    <router-link to="/virtual-call-center/">Call Center</router-link>
                                 </li>
                             </ul>
                         </div>

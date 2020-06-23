@@ -61,12 +61,9 @@
                                         <span class="pricing-item-price-amount h1">{{ getPricingData(this.priceOutput.plan1, 1) }}</span>
                                         <span class="text-sm">{{ getPricingData(this.priceOutput.plan1, 2) }}</span>
                                     </div>
-                                    <div class="text-color-low text-xs">Basic plan for small business</div>
+                                    <div class="text-color-low text-xs">Basic plan for small businesses</div>
                                 </div>
                                 <div class="pricing-item-features mb-40">
-<!--                                    <div class="pricing-item-features-title text-xs text-color-high mb-24">-->
-<!--                                        What's included-->
-<!--                                    </div>-->
                                     <ul class="pricing-item-features-list list-reset text-xs mb-32">
                                         <li class="is-checked">5,000min/month</li>
                                         <li class="is-checked">$0.1/min per extra min</li>
@@ -99,9 +96,6 @@
                                     <div class="text-color-low text-xs">Silver plan for mid-size businesses</div>
                                 </div>
                                 <div class="pricing-item-features mb-40">
-<!--                                    <div class="pricing-item-features-title text-xs text-color-high mb-24">-->
-<!--                                        What's included-->
-<!--                                    </div>-->
                                     <ul class="pricing-item-features-list list-reset text-xs mb-32">
                                         <li class="is-checked">10,000min/month</li>
                                         <li class="is-checked">$0.1/min per extra min</li>
@@ -134,9 +128,6 @@
                                     <div class="text-color-low text-xs">Platinum plan for large businesses</div>
                                 </div>
                                 <div class="pricing-item-features mb-40">
-<!--                                    <div class="pricing-item-features-title text-xs text-color-high mb-24">-->
-<!--                                        What's included-->
-<!--                                    </div>-->
                                     <ul class="pricing-item-features-list list-reset text-xs mb-32">
                                         <li class="is-checked">15,000min/month</li>
                                         <li class="is-checked">$0.1/min per extra min</li>
@@ -164,12 +155,9 @@
                                     <div class="pricing-item-price">
                                         <span class="pricing-item-price-amount h2">Custom</span>
                                     </div>
-                                    <div class="text-color-low text-xs">Enterprise for government & and big organisations</div>
+                                    <div class="text-color-low text-xs">Enterprise plan for government & enterprises</div>
                                 </div>
                                 <div class="pricing-item-features mb-40">
-                                    <!--                                    <div class="pricing-item-features-title text-xs text-color-high mb-24">-->
-                                    <!--                                        What's included-->
-                                    <!--                                    </div>-->
                                     <ul class="pricing-item-features-list list-reset text-xs mb-32">
                                         <li class="is-checked">100,000min/month</li>
                                         <li class="is-checked">$0.1/min per extra min</li>
