@@ -3,9 +3,9 @@
         <div class="m-12">
             <Loading v-if="posts.length == 0"></Loading>
         </div>
-        <c-generic-section v-for="post in posts" v-bind:key="post" top-divider>
+        <c-generic-section v-for="post in posts" v-bind:key="post.id" top-divider>
             <div class="container-xs">
-                <h2 class="mt-0">{{ post.title }}</h2>
+                <router-link :to='"/blog/" + post.slug'><h2 class="mt-0">{{ post.title }}</h2></router-link></a>
                 <p>
                     {{ post.custom_excerpt }}
                 </p>
@@ -44,7 +44,7 @@
     import CAccordion from '@/components/elements/Accordion.vue'
     import CAccordionItem from '@/components/elements/AccordionItem.vue'
 
-    import {getPage, getPosts} from "../plugins/api";
+    import {getPage, getPosts} from "../../plugins/api";
     import Loading from '@/components/elements/Loading.vue'
 
     export default {

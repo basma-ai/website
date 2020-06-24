@@ -18,6 +18,14 @@ export async function getPosts() {
         });
 }
 
+export async function getPost(name, tags = ['']) {
+    return await api.posts
+        .read({slug: name}, {tags: tags})
+        .catch(err => {
+            console.error(err);
+        });
+}
+
 export async function getPage(name, tags = ['']) {
     return await api.pages
         .read({slug: name}, {tags: tags})
