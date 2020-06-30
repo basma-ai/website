@@ -71,8 +71,9 @@
                                         <li class="is-checked">1 Group</li>
                                         <li class="is-checked">2 Services</li>
                                         <li>Custom Fields</li>
-                                        <li>Chat box</li>
+                                        <li>Chat</li>
                                         <li>Exchange Files</li>
+                                        <li>Chatbot</li>
                                         <li>APIs</li>
                                     </ul>
                                 </div>
@@ -103,8 +104,9 @@
                                         <li class="is-checked">3 Groups</li>
                                         <li class="is-checked">6 Services</li>
                                         <li class="is-checked">Custom Fields</li>
-                                        <li>Chat box</li>
+                                        <li>Chat</li>
                                         <li>Exchange Files</li>
+                                        <li>Chatbot</li>
                                         <li>APIs</li>
                                     </ul>
                                 </div>
@@ -135,8 +137,9 @@
                                         <li class="is-checked">10 Groups</li>
                                         <li class="is-checked">10 Services</li>
                                         <li class="is-checked">Custom Fields</li>
-                                        <li class="is-checked">Chat box</li>
+                                        <li class="is-checked">Chat</li>
                                         <li class="is-checked">Exchange Files</li>
+                                        <li>Chatbot</li>
                                         <li>APIs</li>
                                     </ul>
                                 </div>
@@ -165,14 +168,15 @@
                                         <li class="is-checked">Unlimited Groups</li>
                                         <li class="is-checked">Unlimited Services</li>
                                         <li class="is-checked">Custom Fields</li>
-                                        <li class="is-checked">Chat box</li>
+                                        <li class="is-checked">Chat</li>
                                         <li class="is-checked">Exchange Files</li>
+                                        <li class="is-checked">Chatbot</li>
                                         <li class="is-checked">APIs</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="pricing-item-cta mb-8">
-                                <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/basmadotai/15min?hide_event_type_details=1'});return false;" class="button button-secondary button-block">Schedule a meeting</a>
+                                <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/basmadotai/15min?hide_event_type_details=1'});return false;" class="button button-secondary button-block">Book a demo</a>
                                 <p class="center-content text-xxs mb-0 text-color-low" style="visibility: hidden">No credit card required</p>
                             </div>
                         </div>

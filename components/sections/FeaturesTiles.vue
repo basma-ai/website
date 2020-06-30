@@ -173,10 +173,10 @@
                             </div>
                             <div class="features-tiles-item-content">
                                 <h4 class="h5 mt-0 mb-8 reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="300">
-                                    Chat box
+                                    Chat
                                 </h4>
                                 <p class="m-0 text-sm reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="400">
-                                    Use the chat box to send and receive important text messages.
+                                    Use the chat to send and receive important text messages.
                                 </p>
                             </div>
                         </div>
@@ -204,15 +204,15 @@
                         <div class="tiles-item-inner">
                             <div class="features-tiles-item-header">
                                 <div class="features-tiles-item-image mb-16 p-24 reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="100">
-                                    <feather class="text-color-primary" type="feather"></feather>
+                                    <feather class="text-color-primary" type="video"></feather>
                                 </div>
                             </div>
                             <div class="features-tiles-item-content">
                                 <h4 class="h5 mt-0 mb-8 reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="300">
-                                    Modern UI/UX
+                                    Recording
                                 </h4>
                                 <p class="m-0 text-sm reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="400">
-                                    Easy to use interface with state-of-the-art user experience.
+                                    Record your calls and watch them later for quality improvement.
                                 </p>
                             </div>
                         </div>
@@ -222,15 +222,15 @@
                         <div class="tiles-item-inner">
                             <div class="features-tiles-item-header">
                                 <div class="features-tiles-item-image mb-16 p-24 reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="100">
-                                    <feather class="text-color-secondary" type="video"></feather>
+                                    <feather class="text-color-secondary" type="smile"></feather>
                                 </div>
                             </div>
                             <div class="features-tiles-item-content">
                                 <h4 class="h5 mt-0 mb-8 reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="300">
-                                    Recording
+                                    Chatbot
                                 </h4>
                                 <p class="m-0 text-sm reveal-from-top" data-reveal-container=".tiles-item" data-reveal-delay="400">
-                                    Record your calls and watch them later for quality improvement.
+                                    Integrate our smart chatbot to your website or your WhatsApp number.
                                 </p>
                             </div>
                         </div>

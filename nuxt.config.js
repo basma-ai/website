@@ -97,6 +97,10 @@ module.exports = {
             ssr: false
         },
         {
+            src: "~/plugins/freshchat",
+            ssr: false
+        },
+        {
             src: "~/plugins/api",
             ssr: true
         },

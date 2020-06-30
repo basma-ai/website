@@ -19,6 +19,9 @@
                             <div class="footer-block-title">Top Features</div>
                             <ul class="list-reset">
                                 <li>
+                                    <router-link to="/agent-phone/">Agent Phone</router-link>
+                                </li>
+                                <li>
                                     <router-link to="/smart-call-routing/">Smart Call Routing</router-link>
                                 </li>
                                 <li>
