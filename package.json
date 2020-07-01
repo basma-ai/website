@@ -30,6 +30,7 @@
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
     "vue-debounce": "^2.5.3",
+    "vue-disqus": "^4.0.0",
     "vue-feather": "^1.0.0",
     "vue-loading-button": "^0.2.0",
     "vue-notifications": "^1.0.2",

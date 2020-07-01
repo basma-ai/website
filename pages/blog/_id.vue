@@ -6,6 +6,9 @@
                 <h2 class="mt-0">{{ page.title }}</h2>
                 <div v-html="page.html">
                 </div>
+                <div class='comments'>
+                    <Disqus />
+                </div>
             </div>
         </c-generic-section>
     </fragment>
@@ -32,6 +35,7 @@
 
     import {getPost} from "../../plugins/api";
     import Loading from '@/components/elements/Loading.vue'
+    import { Disqus } from 'vue-disqus'
 
     export default {
         props: ['id'],
@@ -52,7 +56,8 @@
             CModal,
             CAccordion,
             CAccordionItem,
-            Loading
+            Loading,
+            Disqus
         },
         data() {
             return {

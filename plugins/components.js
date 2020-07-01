@@ -98,3 +98,8 @@ Vue.use(vueDebounce)
 //     // optional pluginOptions
 //     refreshOnceOnNavigation: true
 // })
+
+import VueDisqus from 'vue-disqus'
+Vue.use(VueDisqus, {
+    shortname: 'basmadotai'
+})
