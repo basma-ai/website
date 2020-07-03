@@ -8,6 +8,9 @@
                             <div class="footer-block-title">Platform</div>
                             <ul class="list-reset">
                                 <li>
+                                    <router-link to="/features/">Features</router-link>
+                                </li>
+                                <li>
                                     <router-link to="/pricing/">Pricing</router-link>
                                 </li>
                                 <li>
@@ -53,7 +56,7 @@
                             </ul>
                         </div>
                         <div class="footer-block">
-                            <div class="footer-block-title">Legal</div>
+                            <div class="footer-block-title">Security</div>
                             <ul class="list-reset">
                                 <li>
                                     <router-link to="/terms#terms-of-service/">Terms and Conditions</router-link>
@@ -63,6 +66,9 @@
                                 </li>
                                 <li>
                                     <router-link to="/security/">Security</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/gdpr-communication/">GDPR Communication</router-link>
                                 </li>
                             </ul>
                         </div>
