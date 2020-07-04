@@ -13,6 +13,7 @@
   "dependencies": {
     "@bachdgvn/vue-otp-input": "^1.0.6",
     "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/google-analytics": "^2.3.0",
     "@nuxtjs/gtm": "^2.3.0",
     "@tryghost/content-api": "^1.4.1",
     "connect-history-api-fallback": "^1.6.0",

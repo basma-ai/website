@@ -120,8 +120,15 @@ module.exports = {
     ],
 
     buildModules: [
-        ['@nuxtjs/gtm']
+        ['@nuxtjs/google-analytics', {
+            id: 'UA-163382802-1',
+            // debug: {
+            //     enabled: true,
+            //     sendHitTask: true
+            // }
+        }]
 
+        // ['@nuxtjs/gtm']
         // id: 'UA-163382802-1',
         // debug: {
         //     enabled: true,
@@ -129,11 +136,11 @@ module.exports = {
         // }
     ],
 
-    gtm: {
-        enabled: true,
-        id: 'GTM-WNQZL95',
-        pageTracking: true,
-    },
+    // gtm: {
+    //     enabled: true,
+    //     id: 'GTM-WNQZL95',
+    //     pageTracking: true,
+    // },
 
     // i18n: {
     //   strategy: 'prefix_and_default',
