@@ -33,7 +33,7 @@
                         </ul>
                         <ul v-if="!hideSignin" class="list-reset header-nav-right">
                             <li>
-                                <router-link to="/signup/" class="button button-primary button-wide-mobile button-sm">Sign up</router-link>
+                                <router-link to="/signup/" id="sign-me-up" class="button button-primary button-wide-mobile button-sm">Sign up</router-link>
                             </li>
                         </ul>
                     </div>

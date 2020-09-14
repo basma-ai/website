@@ -76,7 +76,8 @@ module.exports = {
                         "sameAs": ["https://facebook.com/basmadotai", "https://instagram.com/basmadotai", "https://twitter.com/basmadotai", "https://youtube.com/channel/UCjuatxjiXkSuL6xpqhtk_4A", "https://linkedin.com/company/basmadotai"]
                     }
                 },
-                {src: 'https://assets.calendly.com/assets/external/widget.js'}
+                {src: 'https://assets.calendly.com/assets/external/widget.js'},
+                {src: 'https://cdn.pagesense.io/js/basmaai/5edc56855166486dbc65943b4ed243e5.js'}
             ]
         }
     },
